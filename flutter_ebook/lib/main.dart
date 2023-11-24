@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ebook/consttants.dart';
+import 'package:flutter_ebook/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
           textTheme: Theme.of(context).textTheme.apply(
                 displayColor: kBlackColor,
               )),
-      home: WelcomeScreen(),
+      home: const WelcomeScreen(),
     );
   }
 }
@@ -54,10 +55,21 @@ class WelcomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 10),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text("Comece a aventura..."),
+            SizedBox(
+              width: MediaQuery.of(context).size.width * .6,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return HomeScreen();
+                      },
+                    ),
+                  );
+                },
+                child: Text("Comece a aventura..."),
+              ),
             ),
           ],
         ),
