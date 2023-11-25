@@ -26,8 +26,8 @@ class CardBook extends StatelessWidget {
                 ),
                 boxShadow: const [
                   BoxShadow(
-                    color: Colors.blueGrey,
-                    blurRadius: 4,
+                    color: Color.fromARGB(255, 43, 43, 43),
+                    blurRadius: 5,
                     offset: Offset(0, 2),
                   ),
                 ]),
@@ -38,14 +38,14 @@ class CardBook extends StatelessWidget {
           title,
           style: const TextStyle(
             fontSize: 16,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w700,
           ),
         ),
         Text(
           author,
           style: const TextStyle(
             fontSize: 16,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w400,
           ),
         ),
       ],

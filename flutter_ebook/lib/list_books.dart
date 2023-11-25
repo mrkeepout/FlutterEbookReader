@@ -14,6 +14,7 @@ class ListBook extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
       padding: const EdgeInsets.all(36),
+      shrinkWrap: true,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         crossAxisSpacing: 20,
@@ -22,8 +23,7 @@ class ListBook extends StatelessWidget {
       ),
       itemCount: books.length,
       itemBuilder: (context, index) {
-        final book =
-            books[index]; // Move this line inside the itemBuilder function
+        final book = books[index];
         return GestureDetector(
           onTap: () {
             print("Button pressed!");
