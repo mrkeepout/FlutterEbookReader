@@ -13,12 +13,12 @@ class ListBook extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(36),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        crossAxisSpacing: 12,
+        crossAxisSpacing: 20,
         mainAxisSpacing: 10,
-        childAspectRatio: 3 / 4,
+        childAspectRatio: 0.5,
       ),
       itemCount: books.length,
       itemBuilder: ((context, index) {
