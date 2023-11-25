@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ebook/consttants.dart';
+import 'package:flutter_ebook/components/consttants.dart';
 import 'package:flutter_ebook/screens/home_screen.dart';
 
 void main() {

@@ -23,7 +23,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("escriBook"),
+        title: const Text("EscriBook"),
         centerTitle: true,
       ),
       body: FutureBuilder(

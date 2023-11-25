@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import '../models/books.dart';
 import 'card_book.dart';
@@ -26,7 +27,9 @@ class ListBook extends StatelessWidget {
         final book = books[index];
         return GestureDetector(
           onTap: () {
-            print("Button pressed!");
+            if (kDebugMode) {
+              print("Button pressed!");
+            }
           },
           child: CardBook(
             title: book.title,
