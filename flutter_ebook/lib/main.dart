@@ -63,12 +63,12 @@ class WelcomeScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return const Home();
+                        return HomeScreen();
                       },
                     ),
                   );
                 },
-                child: const Text("Comece a aventura..."),
+                child: Text("Comece a aventura..."),
               ),
             ),
           ],
