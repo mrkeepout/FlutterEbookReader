@@ -1,14 +1,29 @@
 import 'package:flutter/material.dart';
+import '../repository.dart';
+import '../models/books.dart';
+import '../list_books.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class Home extends StatefulWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  Future<List<Book>>? futureBooks;
+
+  @override
+  void initState() {
+    futureBooks = getBooks();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
     return Scaffold(
       appBar: AppBar(
-        title: const Text("EscriBook"),
+        title: const Text("escriBook"),
         centerTitle: true,
       ),
       body: FutureBuilder(
@@ -31,8 +46,5 @@ class HomeScreen extends StatelessWidget {
         },
       ),
     );
-=======
-    return const Placeholder();
->>>>>>> parent of ca4b773 (V0.2)
   }
 }

@@ -19,15 +19,15 @@ class CardBook extends StatelessWidget {
         Expanded(
           child: Container(
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(20),
                 image: DecorationImage(
                   fit: BoxFit.cover,
                   image: NetworkImage(coverImage),
                 ),
                 boxShadow: const [
                   BoxShadow(
-                    color: Color.fromARGB(255, 69, 105, 105),
-                    blurRadius: 0,
+                    color: Colors.blueGrey,
+                    blurRadius: 4,
                     offset: Offset(0, 2),
                   ),
                 ]),
@@ -38,14 +38,14 @@ class CardBook extends StatelessWidget {
           title,
           style: const TextStyle(
             fontSize: 16,
-            fontWeight: FontWeight.w700,
+            fontWeight: FontWeight.w500,
           ),
         ),
         Text(
           author,
           style: const TextStyle(
             fontSize: 16,
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.w500,
           ),
         ),
       ],

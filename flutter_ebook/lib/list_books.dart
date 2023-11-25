@@ -21,18 +21,20 @@ class ListBook extends StatelessWidget {
         childAspectRatio: 0.5,
       ),
       itemCount: books.length,
-      itemBuilder: ((context, index) {
-        final book = books[index];
+      itemBuilder: (context, index) {
+        final book =
+            books[index]; // Move this line inside the itemBuilder function
         return GestureDetector(
-            onTap: () {
-              print('Button pressed!');
-            },
-            child: CardBook(
-              title: book.title,
-              author: book.author,
-              coverImage: book.coverImage,
-            ));
-      }),
+          onTap: () {
+            print("Button pressed!");
+          },
+          child: CardBook(
+            title: book.title,
+            author: book.author,
+            coverImage: book.coverImage,
+          ),
+        );
+      },
     );
   }
 }
